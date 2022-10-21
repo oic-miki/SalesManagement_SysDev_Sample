@@ -56,6 +56,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MessageMap.cs" />
     <Compile Include="PersonAgeLabel.cs">
       <SubType>Component</SubType>
     </Compile>
