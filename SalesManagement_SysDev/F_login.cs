@@ -12,13 +12,30 @@ namespace SalesManagement_SysDev
 {
     public partial class F_Login : Form
     {
+
+        private Person person;
+
         public F_Login()
         {
             InitializeComponent();
+
+            person = new Person();
+
+        }
+
+        public Person getPerson()
+        {
+
+            return person;
+
         }
 
         private void btn_CleateDabase_Click(object sender, EventArgs e)
         {
+
+            new Form1(this).Show();
+
+/*
             //データベースの生成を行います．
             //再度実行する場合には，必ずデータベースの削除をしてから実行してください．
             
@@ -33,6 +50,7 @@ namespace SalesManagement_SysDev
             context.Dispose();
 
             MessageBox.Show("テーブル作成完了");
+*/
         }
     }
 }
