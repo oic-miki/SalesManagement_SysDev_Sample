@@ -35,10 +35,13 @@ namespace SalesManagement_SysDev
             button2.Text = "年齢を変更する";
             button3.Text = "情報を削除する";
 
+            button4.Text = "名前を変更";
+            button5.Text = "年齢を変更";
+            button6.Text = "情報を削除";
+
             person = fLogin.getPerson();
 
             label1.addPerson(person);
-person.setName("Miki");
             //            label1.Text = person.getName();
 
 //            changeScreenSize();
@@ -128,7 +131,7 @@ person.setName("Miki");
             try
             {
 
-                Int16.Parse(textBox1.Text);
+                person.setAge(Int16.Parse(textBox1.Text));
 
             }
             catch (FormatException fe)
@@ -141,7 +144,9 @@ person.setName("Miki");
         private void button6_Click(object sender, EventArgs e)
         {
 
-            this.Hide();
+            person.setName("");
+            person.setAge(0);
+            //this.Hide();
 
         }
     }

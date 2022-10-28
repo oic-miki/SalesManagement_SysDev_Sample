@@ -12,6 +12,13 @@ namespace SalesManagement_SysDev
 
         private Person person;
 
+        public PersonNameLabel()
+        {
+
+            Text = "";
+
+        }
+
         public Person addPerson(Person person)
         {
 
