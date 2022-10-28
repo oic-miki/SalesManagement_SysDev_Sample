@@ -47,7 +47,19 @@ namespace SalesManagement_SysDev
         public void update()
         {
 
-            Text = person.getAge().ToString();
+            int age = person.getAge();
+            if (age > 0)
+            {
+
+                Text = age.ToString();
+
+            }
+            else
+            {
+
+                Text = "";
+
+            }
 
         }
 

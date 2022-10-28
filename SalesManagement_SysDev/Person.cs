@@ -82,6 +82,7 @@ namespace SalesManagement_SysDev
             foreach(Listener listener in listeners)
             {
 
+                Console.WriteLine("listener --> " + listener);
                 listener.update();
 
             }

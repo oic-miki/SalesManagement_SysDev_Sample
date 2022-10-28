@@ -42,9 +42,10 @@ namespace SalesManagement_SysDev
             person = fLogin.getPerson();
 
             label1.addPerson(person);
+            label2.addPerson(person);
             //            label1.Text = person.getName();
 
-//            changeScreenSize();
+            //            changeScreenSize();
 
         }
 
@@ -131,7 +132,7 @@ namespace SalesManagement_SysDev
             try
             {
 
-                person.setAge(Int16.Parse(textBox1.Text));
+                person.setAge(Int16.Parse(textBox2.Text));
 
             }
             catch (FormatException fe)
