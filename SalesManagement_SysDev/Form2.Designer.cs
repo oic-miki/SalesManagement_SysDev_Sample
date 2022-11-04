@@ -39,7 +39,7 @@ namespace SalesManagement_SysDev
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(82, 100);
+            this.label1.Location = new System.Drawing.Point(56, 97);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 12);
             this.label1.TabIndex = 0;
@@ -48,7 +48,7 @@ namespace SalesManagement_SysDev
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(72, 152);
+            this.label2.Location = new System.Drawing.Point(56, 149);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 12);
             this.label2.TabIndex = 1;
@@ -56,7 +56,7 @@ namespace SalesManagement_SysDev
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(238, 208);
+            this.button1.Location = new System.Drawing.Point(159, 208);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -66,14 +66,14 @@ namespace SalesManagement_SysDev
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(188, 97);
+            this.textBox1.Location = new System.Drawing.Point(134, 97);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 19);
             this.textBox1.TabIndex = 3;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(188, 149);
+            this.textBox2.Location = new System.Drawing.Point(134, 149);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 19);
             this.textBox2.TabIndex = 4;
@@ -82,7 +82,7 @@ namespace SalesManagement_SysDev
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(355, 293);
+            this.ClientSize = new System.Drawing.Size(288, 293);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
