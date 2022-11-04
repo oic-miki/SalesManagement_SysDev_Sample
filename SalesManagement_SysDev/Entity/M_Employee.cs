@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SalesManagement_SysDev
 {
-    class M_Employee
+    public class M_Employee
     {
         [Key]
         public int EmID { get; set; }               //社員ID

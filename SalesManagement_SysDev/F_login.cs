@@ -33,7 +33,8 @@ namespace SalesManagement_SysDev
         private void btn_CleateDabase_Click(object sender, EventArgs e)
         {
 
-            new Form1(this).Show();
+            new Form2().Show();
+//            new Form1(this).Show();
 
 /*
             //データベースの生成を行います．
