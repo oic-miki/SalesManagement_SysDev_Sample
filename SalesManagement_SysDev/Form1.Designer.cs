@@ -40,8 +40,8 @@ namespace SalesManagement_SysDev
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
-            this.label1 = new SalesManagement_SysDev.PersonNameLabel();
             this.label2 = new SalesManagement_SysDev.PersonAgeLabel();
+            this.label1 = new SalesManagement_SysDev.PersonNameLabel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -109,7 +109,7 @@ namespace SalesManagement_SysDev
             this.panel2.BackColor = System.Drawing.Color.MistyRose;
             this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Location = new System.Drawing.Point(306, 184);
+            this.panel2.Location = new System.Drawing.Point(306, 138);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 100);
             this.panel2.TabIndex = 4;
@@ -135,7 +135,7 @@ namespace SalesManagement_SysDev
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel3.Controls.Add(this.button6);
-            this.panel3.Location = new System.Drawing.Point(305, 330);
+            this.panel3.Location = new System.Drawing.Point(306, 244);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(200, 100);
             this.panel3.TabIndex = 5;
@@ -150,15 +150,6 @@ namespace SalesManagement_SysDev
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(64, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 12);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "label1";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -168,15 +159,24 @@ namespace SalesManagement_SysDev
             this.label2.TabIndex = 7;
             this.label2.Text = "label2";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(64, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 12);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "label1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);

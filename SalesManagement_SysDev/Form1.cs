@@ -32,14 +32,19 @@ namespace SalesManagement_SysDev
             hidePanels();
 
             button1.Text = "名前を変更する";
+            new ToolTip().SetToolTip(button1, "名前を変更する");
             button2.Text = "年齢を変更する";
+            new ToolTip().SetToolTip(button2, "年齢を変更する");
             button3.Text = "情報を削除する";
+            new ToolTip().SetToolTip(button3, "情報を削除する");
 
             button4.Text = "名前を変更";
             button5.Text = "年齢を変更";
             button6.Text = "情報を削除";
 
             person = fLogin.getPerson();
+
+            panel2.Location = panel3.Location = new Point(305, 32);
 
             label1.addPerson(person);
             label2.addPerson(person);
@@ -86,7 +91,8 @@ namespace SalesManagement_SysDev
             foreach(Panel panel in panels)
             {
 
-                panel.Hide();
+                panel.Visible = false;
+                //panel.Hide();
 
             }
 
@@ -97,7 +103,8 @@ namespace SalesManagement_SysDev
 
             hidePanels();
 
-            panel1.Show();
+            panel1.Visible = true;
+            //panel1.Show();
 
         }
 
@@ -106,7 +113,8 @@ namespace SalesManagement_SysDev
 
             hidePanels();
 
-            panel2.Show();
+            panel2.Visible = true;
+            //panel2.Show();
 
         }
 
@@ -115,7 +123,8 @@ namespace SalesManagement_SysDev
 
             hidePanels();
 
-            panel3.Show();
+            panel3.Visible = true;
+            //panel3.Show();
 
         }
 

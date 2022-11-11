@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.Entity;
 using System.Data.Entity.Validation;
 
 namespace SalesManagement_SysDev
@@ -33,6 +34,10 @@ namespace SalesManagement_SysDev
                     EmID = 0,
                     EmPassword = "",
                     EmName = "",
+                    EmPhone = "000-0000-0000",
+                    EmHiredate = DateTime.ParseExact("20221111", "yyyyMMdd",
+    System.Globalization.CultureInfo.InvariantCulture),
+                    //                EmHiredate = new DateTime(),
                 };
 
             }
@@ -42,6 +47,10 @@ namespace SalesManagement_SysDev
                 EmID = 1,
                 EmPassword = "0001",
                 EmName = "三木",
+                EmPhone = "012-3456-7890",
+                EmHiredate = DateTime.ParseExact("19691218", "yyyyMMdd",
+    System.Globalization.CultureInfo.InvariantCulture),
+//                EmHiredate = new DateTime(),
             };
 
         }
@@ -52,12 +61,17 @@ namespace SalesManagement_SysDev
             M_Employee conditionEmployee = mock(id);
 
             SalesManagement_DevContext context = new SalesManagement_DevContext();
+            DbContextTransaction transaction = context.Database.BeginTransaction();
 
             context.M_Employees.Add(conditionEmployee);
+
             try
             {
 
                 context.SaveChanges();
+
+                Console.WriteLine("SaveChanges()");
+                transaction.Commit();
 
             }
             catch (DbEntityValidationException ex)
@@ -78,7 +92,8 @@ namespace SalesManagement_SysDev
             }
 
             // データの検索
-            M_Employee foundEmployee = context.M_Employees.Find(conditionEmployee.EmID = id);
+            M_Employee foundEmployee = context.M_Employees.Find(id);
+//            M_Employee foundEmployee = context.M_Employees.Find(conditionEmployee.EmID = id);
 
             context.Dispose();
 
