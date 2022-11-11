@@ -33,7 +33,9 @@ namespace SalesManagement_SysDev
         private void btn_CleateDabase_Click(object sender, EventArgs e)
         {
 
-            new Form2().Show();
+//            new Form4().Show();
+            new Form3().Show();
+//            new Form2().Show();
 //            new Form1(this).Show();
 
 /*
