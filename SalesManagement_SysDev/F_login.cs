@@ -35,7 +35,7 @@ namespace SalesManagement_SysDev
 
 //            new Form4().Show();
             new Form3().Show();
-//            new Form2().Show();
+            new Form2().Show();
 //            new Form1(this).Show();
 
 /*

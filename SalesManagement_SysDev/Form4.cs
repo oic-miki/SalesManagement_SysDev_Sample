@@ -16,6 +16,8 @@ namespace SalesManagement_SysDev
 
         private int index = 0;
 
+        private String selectedText = "";
+
         public Form4()
         {
 
@@ -28,6 +30,7 @@ namespace SalesManagement_SysDev
 
         private void Form4_Load(object sender, EventArgs e)
         {
+
             // 列数・行数を指定
             dataGridView1.ColumnCount = 4;
             dataGridView1.RowCount = 5;
@@ -69,6 +72,29 @@ namespace SalesManagement_SysDev
             //dataGridView1.Rows[4].Cells[2].Value = "27";
             //dataGridView1.Rows[4].Cells[3].Value = "男性";
 
+            SalesManagement_DevContext context = new SalesManagement_DevContext();
+
+            //EmployeeDataAccess employeeDAO = new EmployeeDataAccess();
+//            context.M_Employees.Add(
+//                 new M_Employee()
+//            {
+//                EmID = 1,
+//                EmPassword = "0001",
+//                EmName = "三木",
+//                EmPhone = "012-3456-7890",
+//                EmHiredate = DateTime.ParseExact("19691218", "yyyyMMdd",
+//    System.Globalization.CultureInfo.InvariantCulture),
+////                EmHiredate = new DateTime(),
+//            }
+//                );
+            comboBox1.DataSource = context.M_Employees.ToList();
+            //foreach (DataGridViewRow rowData in dataGridView1.Rows)
+            //{
+
+            //    comboBox1.Items.AddRange(new String[] { rowData.HeaderCell.ToString() });
+
+            //}
+
         }
 
         private void addRowData(int rowNumber, int number, string userName, string age, string gender)
@@ -97,6 +123,14 @@ namespace SalesManagement_SysDev
 
         }
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            selectedText = ((M_Employee)comboBox1.SelectedItem).EmName.ToString();
+//            label1.Text = ((M_Employee) comboBox1.SelectedItem).EmName.ToString();
+            label1.Text = selectedText;
+
+        }
     }
 
 }
