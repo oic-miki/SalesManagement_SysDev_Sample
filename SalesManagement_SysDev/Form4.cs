@@ -10,10 +10,15 @@ using System.Windows.Forms;
 
 namespace SalesManagement_SysDev
 {
+
     public partial class Form4 : Form
     {
+
+        private int index = 0;
+
         public Form4()
         {
+
             InitializeComponent();
 
 //            dataGridView1.RowHeadersVisible = false;
@@ -24,38 +29,74 @@ namespace SalesManagement_SysDev
         private void Form4_Load(object sender, EventArgs e)
         {
             // 列数・行数を指定
-    dataGridView1.ColumnCount = 4;
-    dataGridView1.RowCount = 5;
+            dataGridView1.ColumnCount = 4;
+            dataGridView1.RowCount = 5;
 
+            // 列名を指定
+            int columnNumber = 0;
+            dataGridView1.Columns[columnNumber++].HeaderText = "No";
+            dataGridView1.Columns[columnNumber++].HeaderText = "ユーザ名";
+            dataGridView1.Columns[columnNumber++].HeaderText = "年齢";
+            dataGridView1.Columns[columnNumber++].HeaderText = "性別";
 
-    // 列名を指定
-    dataGridView1.Columns[0].HeaderText = "No";
-    dataGridView1.Columns[1].HeaderText = "ユーザ名";
-    dataGridView1.Columns[2].HeaderText = "年齢";
-    dataGridView1.Columns[3].HeaderText = "性別";
+            // セルのデータを5行分設定
+            int rowNumber = 0;
 
+            addRowData(rowNumber++, rowNumber, "ユーザ" + rowNumber, "28", "男性");
+            addRowData(rowNumber++, rowNumber, "ユーザ" + rowNumber, "22", "女性");
+            addRowData(rowNumber++, rowNumber, "ユーザ" + rowNumber, "34", "女性");
+            addRowData(rowNumber++, rowNumber, "ユーザ" + rowNumber, "33", "男性");
+            addRowData(rowNumber++, rowNumber, "ユーザ" + rowNumber, "27", "男性");
 
-    // セルのデータを5行分設定
-    dataGridView1.Rows[0].Cells[0].Value = 1;
-    dataGridView1.Rows[0].Cells[1].Value = "ユーザ1";
-    dataGridView1.Rows[0].Cells[2].Value = "28";
-    dataGridView1.Rows[0].Cells[3].Value = "男性";
-    dataGridView1.Rows[1].Cells[0].Value = 2;
-    dataGridView1.Rows[1].Cells[1].Value = "ユーザ2";
-    dataGridView1.Rows[1].Cells[2].Value = "22";
-    dataGridView1.Rows[1].Cells[3].Value = "女性";
-    dataGridView1.Rows[2].Cells[0].Value = 3;
-    dataGridView1.Rows[2].Cells[1].Value = "ユーザ3";
-    dataGridView1.Rows[2].Cells[2].Value = "34";
-    dataGridView1.Rows[2].Cells[3].Value = "女性";
-    dataGridView1.Rows[3].Cells[0].Value = 4;
-    dataGridView1.Rows[3].Cells[1].Value = "ユーザ4";
-    dataGridView1.Rows[3].Cells[2].Value = "33";
-    dataGridView1.Rows[3].Cells[3].Value = "男性";
-    dataGridView1.Rows[4].Cells[0].Value = 5;
-    dataGridView1.Rows[4].Cells[1].Value = "ユーザ5";
-    dataGridView1.Rows[4].Cells[2].Value = "27";
-    dataGridView1.Rows[4].Cells[3].Value = "男性";
+            //dataGridView1.Rows[1].Cells[0].Value = 1;
+            //dataGridView1.Rows[1].Cells[1].Value = "ユーザ1";
+            //dataGridView1.Rows[1].Cells[2].Value = "28";
+            //dataGridView1.Rows[1].Cells[3].Value = "男性";
+            //dataGridView1.Rows[1].Cells[0].Value = 2;
+            //dataGridView1.Rows[1].Cells[1].Value = "ユーザ2";
+            //dataGridView1.Rows[1].Cells[2].Value = "22";
+            //dataGridView1.Rows[1].Cells[3].Value = "女性";
+            //dataGridView1.Rows[2].Cells[0].Value = 3;
+            //dataGridView1.Rows[2].Cells[1].Value = "ユーザ3";
+            //dataGridView1.Rows[2].Cells[2].Value = "34";
+            //dataGridView1.Rows[2].Cells[3].Value = "女性";
+            //dataGridView1.Rows[3].Cells[0].Value = 4;
+            //dataGridView1.Rows[3].Cells[1].Value = "ユーザ4";
+            //dataGridView1.Rows[3].Cells[2].Value = "33";
+            //dataGridView1.Rows[3].Cells[3].Value = "男性";
+            //dataGridView1.Rows[4].Cells[0].Value = 5;
+            //dataGridView1.Rows[4].Cells[1].Value = "ユーザ5";
+            //dataGridView1.Rows[4].Cells[2].Value = "27";
+            //dataGridView1.Rows[4].Cells[3].Value = "男性";
+
         }
+
+        private void addRowData(int rowNumber, int number, string userName, string age, string gender)
+        {
+
+            int cellNumber = 0;
+
+            dataGridView1.Rows[rowNumber].Cells[cellNumber++].Value = number;
+            dataGridView1.Rows[rowNumber].Cells[cellNumber++].Value = userName;
+            dataGridView1.Rows[rowNumber].Cells[cellNumber++].Value = age;
+            dataGridView1.Rows[rowNumber++].Cells[cellNumber++].Value = gender;
+
+        }
+
+        public DataGridViewRow nextData()
+        {
+
+            if (index == dataGridView1.RowCount)
+            {
+
+                index = 0;
+
+            }
+
+            return dataGridView1.Rows[index++];
+
+        }
+
     }
+
 }
